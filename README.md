@@ -1,5 +1,5 @@
 
-# E-mile12 fullstack README
+# E-mile12 fullstack README (Serverside)
 
 Welcome to the README of eMile12 🛍️
 🌟 Check out the original project [here](https://e-mile12-client.vercel.app) 
