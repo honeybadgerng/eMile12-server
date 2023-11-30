@@ -1,5 +1,5 @@
 "use strict";
-const paystack = require("paystack")(process.env.PAYSTACK_SECRET_KEY);
+
 /**
  * order controller
  */
@@ -8,11 +8,17 @@ const { createCoreController } = require("@strapi/strapi").factories;
 
 module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
-    const { products, email } = ctx.request.body;
+    const {
+      billingAddress,
+      userName,
+      email,
+      phoneNumber,
+      products,
+      price_data,
+      price,
+    } = ctx.request.body;
 
-    const userName = "test";
     try {
-      //retrieve item information
       const lineItems = await Promise.all(
         products.map(async (product) => {
           const item = await strapi
@@ -25,31 +31,30 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
               product_data: {
                 name: item.name,
               },
-              unit_amount: item.price * 100,
+              unit_amount: item.price,
             },
             quantity: product.count,
           };
         })
       );
-      // create a paystack session
-      const session = await paystack.checkout.sessions.create({
-        payment_method_types: ["card"],
-        customer_email: email,
-        mode: "payment",
-        success_url: "http://localhost:3000/checkout/success",
-        cancel_url: "http://localhost:3000",
-        line_items: lineItems,
-      });
-      // create the item
+
       await strapi.service("api::order.order").create({
-        data: { userName, products, paystackSessionId: session.id },
+        data: {
+          userName,
+          products,
+          billingAddress,
+          email,
+          phoneNumber,
+          price_data,
+          price,
+          lineItems,
+        },
       });
 
-      //  return session id
-      return { id: session.id };
-    } catch (error) {
+      return { message: "saved successfully" };
+    } catch (e) {
       ctx.response.status = 500;
-      return { error: { message: "There was a problem creating the charge" } };
+      return { error: { message: "An Error occured " } };
     }
   },
 }));
