@@ -67,7 +67,21 @@
         "cannedPackagedFoods",
         "candyChocolate",
         "syrupsSugarsSweeteners",
-        "televisions"
+        "televisions",
+        "cameras",
+        "homeTheatres",
+        "generatorsAndInverters",
+        "airConditionersAndAccessories",
+        "refrigerators",
+        "washingMachinesAndDryers",
+        "freezers",
+        "heaters",
+        "fans",
+        "airPurifiers",
+        "waterDispensers",
+        "generators",
+        "inverters",
+        "rangeHoods"
       ]
     }
   }
