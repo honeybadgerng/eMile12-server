@@ -52,7 +52,22 @@
         "gaming",
         "sportGoods",
         "petSupplies",
-        "booksMoviesAndMusic"
+        "booksMoviesAndMusic",
+        "grainsAndRice",
+        "pastaAndNoodles",
+        "breakfastFoods",
+        "herbsSpicesSeasoning",
+        "floursMeals",
+        "maltDrinks",
+        "coffee",
+        "water",
+        "cookingOil",
+        "juices",
+        "softDrinks",
+        "cannedPackagedFoods",
+        "candyChocolate",
+        "syrupsSugarsSweeteners",
+        "televisions"
       ]
     }
   }
