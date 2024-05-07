@@ -83,6 +83,10 @@
         "inverters",
         "rangeHoods"
       ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
