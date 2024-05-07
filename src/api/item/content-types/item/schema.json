@@ -28,12 +28,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "category": {
       "type": "enumeration",
@@ -68,6 +63,20 @@
         "candyChocolate",
         "syrupsSugarsSweeteners",
         "televisions",
+        "cameras",
+        "homeTheatres",
+        "generatorsAndInverters",
+        "airConditionersAndAccessories",
+        "refrigerators",
+        "washingMachinesAndDryers",
+        "freezers",
+        "heaters",
+        "fans",
+        "airPurifiers",
+        "waterDispensers",
+        "generators",
+        "inverters",
+        "rangeHoods",
         "eMile12"
       ]
     },
