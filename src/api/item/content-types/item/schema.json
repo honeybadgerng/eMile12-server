@@ -69,6 +69,10 @@
         "syrupsSugarsSweeteners",
         "televisions"
       ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
