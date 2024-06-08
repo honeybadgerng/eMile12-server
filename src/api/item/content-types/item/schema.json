@@ -77,21 +77,7 @@
         "generators",
         "inverters",
         "rangeHoods",
-        "eMile12"
-        "cameras",
-        "homeTheatres",
-        "generatorsAndInverters",
-        "airConditionersAndAccessories",
-        "refrigerators",
-        "washingMachinesAndDryers",
-        "freezers",
-        "heaters",
-        "fans",
-        "airPurifiers",
-        "waterDispensers",
-        "generators",
-        "inverters",
-        "rangeHoods"
+        "eMile12",
       ]
     },
     "slug": {
